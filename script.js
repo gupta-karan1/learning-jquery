@@ -99,6 +99,7 @@
   });
 }); */
 
+/*
 // jQuery Effects
 $(document).ready(function () {
   // hide
@@ -149,5 +150,42 @@ $(document).ready(function () {
     $("#div1").fadeTo("slow", 0.2);
     $("#div2").fadeTo("slow", 0.4);
     $("#div3").fadeTo("slow", 0.6);
+  });
+
+  // slideUp, slideDown and slideToggle
+
+  // $("#flip").click(function (e) {
+  //   e.preventDefault();
+  //   $("#panel").slideUp();
+  // });
+  // $("#flip").click(function (e) {
+  //   e.preventDefault();
+  //   $("#panel").slideDown();
+  // });
+
+  $("#flip").click(function (e) {
+    e.preventDefault();
+    $("#panel").slideToggle();
+  });
+});
+*/
+
+// jQuery Animations
+$(document).ready(function () {
+  // move right
+  $("#btn1").click(function (e) {
+    e.preventDefault();
+    $("#green-square").animate({ left: "400px" });
+  });
+
+  // manipulate multiple properties
+  $("#btn2").click(function (e) {
+    e.preventDefault();
+    $("#red-square").animate({
+      left: "300px",
+      opacity: "0.1",
+      height: "200px",
+      width: "200px",
+    });
   });
 });
