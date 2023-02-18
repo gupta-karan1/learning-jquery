@@ -98,3 +98,56 @@
     },
   });
 }); */
+
+// jQuery Effects
+$(document).ready(function () {
+  // hide
+  $("#hide").click(function (e) {
+    e.preventDefault();
+    $("p").hide(1000);
+  });
+
+  // show
+  $("#show").click(function (e) {
+    e.preventDefault();
+    $("p").show(1000);
+  });
+
+  // toggle
+  $("#toggle").click(function (e) {
+    e.preventDefault();
+    $("#p1").toggle("fast");
+  });
+
+  // fadeIn
+  $("#fadeIn").click(function (e) {
+    e.preventDefault();
+    $("#div1").fadeIn("fast");
+    $("#div2").fadeIn("slow");
+    $("#div3").fadeIn(1000);
+  });
+
+  // fadeOut
+  $("#fadeOut").click(function (e) {
+    e.preventDefault();
+    $("#div3").fadeOut("fast");
+    $("#div2").fadeOut("slow");
+    $("#div1").fadeOut(1000);
+  });
+
+  // fadeToggle
+  $("#fadeToggle").click(function (e) {
+    e.preventDefault();
+    $("#div1").fadeToggle("fast");
+    $("#div2").fadeToggle("slow");
+    $("#div3").fadeToggle(1000);
+  });
+
+  // fadeTo
+  $("#fadeTo").click(function (e) {
+    e.preventDefault();
+    $("#div1").fadeTo("slow", 0.2);
+    $("#div2").fadeTo("slow", 0.4);
+    $("#div3").fadeTo("slow", 0.6);
+  });
+});
