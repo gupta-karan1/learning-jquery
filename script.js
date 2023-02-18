@@ -188,4 +188,57 @@ $(document).ready(function () {
       width: "200px",
     });
   });
+
+  // using relative values
+  $("#btn3").click(function (e) {
+    e.preventDefault();
+    $("#blue-square").animate({
+      left: "300px",
+      height: "+=150px",
+      width: "+=150px",
+      top: "+=150px",
+    });
+  });
+
+  // using predefined show, hide and toggle
+  $("#btn4").click(function (e) {
+    e.preventDefault();
+    $("#orange-square").animate(
+      {
+        height: "toggle",
+      },
+      "slow"
+    );
+  });
+
+  // Using queue functionality
+  // runs the animate calls ONE by ONE.
+  $("#btn5").click(function (e) {
+    e.preventDefault();
+    var div1 = $("#pink-square");
+    div1.animate({ height: "300px", opacity: "0.4" }, "slow");
+    div1.animate({ width: "300px", opacity: "0.8" }, "slow");
+    div1.animate({ height: "100px", opacity: "0.4" }, "slow");
+    div1.animate({ width: "100px", opacity: "0.8" }, "slow");
+  });
+
+  // stop animations
+  $("#btnStop").click(function (e) {
+    e.preventDefault();
+    $("#pink-square").stop();
+  });
+
+  // Using callback functions as parameters in animations to execute the function after an effect is finished
+  // $("#togglePara").click(function (e) {
+  //   e.preventDefault();
+  //   $("p").toggle("slow", function () {
+  //     alert("Hello World");
+  //   });
+  // });
+
+  // method chaining
+  $("#togglePara").click(function (e) {
+    e.preventDefault();
+    $("p").css("color", "red").slideUp(2000).slideDown(2000);
+  });
 });
