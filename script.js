@@ -170,6 +170,7 @@ $(document).ready(function () {
 });
 */
 
+/*
 // jQuery Animations
 $(document).ready(function () {
   // move right
@@ -240,5 +241,53 @@ $(document).ready(function () {
   $("#togglePara").click(function (e) {
     e.preventDefault();
     $("p").css("color", "red").slideUp(2000).slideDown(2000);
+  });
+});
+*/
+
+// jQuery DOM Manipulation
+
+// get html elements
+$(document).ready(function () {
+  // get text within html tags
+  $("#btn1").click(function (e) {
+    e.preventDefault();
+    alert("Text: " + $("#test").text());
+  });
+
+  // get html content with nested html tags
+  $("#btn2").click(function (e) {
+    e.preventDefault();
+    alert("Text: " + $("#test").html());
+  });
+
+  // get input value from input field
+  $("#btn3").click(function (e) {
+    e.preventDefault();
+    alert("Value: " + $("#input-test").val());
+  });
+
+  // get attribute of html element
+  $("#btn4").click(function (e) {
+    e.preventDefault();
+    alert($("#w3s").attr("href"));
+  });
+
+  // set text within an html element
+  $("#btn5").click(function (e) {
+    e.preventDefault();
+    $("#test1").text("Hello World!");
+  });
+
+  // set html
+  $("#btn6").click(function (e) {
+    e.preventDefault();
+    $("#test2").html("<b>Hello World</b>");
+  });
+
+  // set input value
+  $("#btn7").click(function (e) {
+    e.preventDefault();
+    $("#test3").val("John Doe");
   });
 });
