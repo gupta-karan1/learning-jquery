@@ -377,4 +377,16 @@ $(document).ready(function () {
     // specify multiple classes at once
     $("h2").addClass("blue important");
   });
+
+  // remove classes
+  $("#btn20").click(function (e) {
+    e.preventDefault();
+    $("h1, h2, .prg, #div6").removeClass("blue important");
+  });
+
+  // toggle classes
+  $("#btn21").click(function (e) {
+    e.preventDefault();
+    $("h1, h2, .prg").toggleClass("blue");
+  });
 });
