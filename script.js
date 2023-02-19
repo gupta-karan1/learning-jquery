@@ -314,4 +314,67 @@ $(document).ready(function () {
       );
     });
   });
+
+  // append text content
+  $("#btn10").click(function (e) {
+    e.preventDefault();
+    $(".para").append("<b>Appended Text</b>");
+  });
+
+  // append list item
+  $("#btn11").click(function (e) {
+    e.preventDefault();
+    $("ol").append("<li>Appended Item</li>");
+  });
+
+  // prepend text
+  $("#btn12").click(function (e) {
+    e.preventDefault();
+    $(".para").prepend("<b>Prepended Text </b>");
+  });
+
+  // prepend list item
+  $("#btn13").click(function (e) {
+    e.preventDefault();
+    $("ol").prepend("<li>Prepended List Item</li>");
+  });
+
+  // add content after html element
+  $("#btn15").click(function (e) {
+    e.preventDefault();
+    $("#image").after(" Text After Image");
+  });
+
+  // add content before html element
+  $("#btn14").click(function (e) {
+    e.preventDefault();
+    $("#image").before("Text Before Image ");
+  });
+
+  // remove the selected element and child elements
+  $("#btn16").click(function (e) {
+    e.preventDefault();
+    $("#div4").remove();
+  });
+
+  // empty method will remove the child elements only
+  $("#btn17").click(function (e) {
+    e.preventDefault();
+    $("#div4").empty();
+  });
+
+  // remove element with class filter
+  $("#btn18").click(function (e) {
+    e.preventDefault();
+    $("p").remove(".remove, .demo");
+  });
+
+  // Add class attributes to different elements
+  $("#btn19").click(function (e) {
+    e.preventDefault();
+    $("h1, .prg").addClass("blue");
+    $("#div6").addClass("important");
+    // specify multiple classes at once
+    $("h2").addClass("blue important");
+  });
 });
