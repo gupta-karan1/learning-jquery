@@ -290,4 +290,28 @@ $(document).ready(function () {
     e.preventDefault();
     $("#test3").val("John Doe");
   });
+
+  // use callback function to use the original text within the html elements
+  $("#btn8").click(function (e) {
+    e.preventDefault();
+    $("#test4").text(function (i, origText) {
+      return (
+        "Old text: " + origText + " New text: Hello World! (index: " + i + ")"
+      );
+    });
+  });
+
+  // use callback to use original html content
+  $("#btn9").click(function (e) {
+    e.preventDefault();
+    $("#test5").html(function (i, origText) {
+      return (
+        "Old html: " +
+        origText +
+        "New html: Hello <b>World!</b> (index: " +
+        i +
+        ")"
+      );
+    });
+  });
 });
